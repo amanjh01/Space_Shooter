@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Shooter</title>
+  </head>
+  <style>
+    body {
+      width: 100%;
+      overflow: hidden;
+      background: rgb(17, 17, 17);
+      background-size: cover;
+    }
+    #board {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      margin: 40px auto;
+      box-shadow: 4px 4px 10px rgb(0, 0, 0),-4px -4px 10px #000;
+      background-color: rgb(17, 17, 17);;
+      overflow: hidden;
+      
+    }
+
+    #jet {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: url("rocket.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 50%;
+      bottom: 0px;
+    }
+
+    .bullets {
+      position: absolute;
+      bottom: 40px;
+      left: 51%;
+      width: 20px;
+      height: 20px;
+      background: url("bullet.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .rocks {
+      position: absolute;
+      top: 0px;
+      width: 50px;
+      height: 50px;
+      background: url("abc.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    #points {
+      position: absolute;
+      top: 0px;
+      margin: 40px;
+      opacity: 0.7;
+      font-size: 3em;
+      color: white;
+    }
+    .header-title{
+      color: #fff; 
+      margin: 40px auto;
+      margin-left: 42%;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      letter-spacing: 1.5px; 
+      
+      animation-name: glow;
+      animation-duration: 4s; 
+      animation-iteration-count: infinite;
+    }
+    @keyframes glow{
+      0%{
+          text-shadow: none;
+          
+      }
+
+      50%{
+        text-shadow: 2px 2px 5px #fff,-2px -2px 5px #fff
+        
+      }
+
+
+      100%{
+text-shadow: none;
+      }
+    }
+  </style>
+  <script src="app.js" defer></script>
+  <body>
+    <div class="header">
+      <h1 class="header-title">Space Shooter</h1>
+    </div>
+    <div id="board">
+      <div class="rocks"></div>
+      <div id="jet"></div>
+    </div>
+    <div id="points">0</div>
+  </body>
+</html>
